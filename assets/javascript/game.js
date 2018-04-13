@@ -9,10 +9,11 @@
     //possibly a play again alert appears, clicking ok will reset.
     //could do same for wins and losses, alert with play again, yes or no.
 
-var wordBank = ["cowboy", "horse", "tumbleweed", "saloon", "revolver", "outlaw", "indians", "saddle", "sheriff", "cattle", "lasso"]
+var wordBank = ["cowboy", "mustang", "tumbleweed", "saloon", "revolver", "outlaw", "indians", "saddle", "sheriff", "cattle", "lasso", "whiskey", "shotgun", "stagecoach", "buffalo", "railroad"]
 
 var wins = 0;
 var losses = 0;
+var guessesLeft = 10;
 var lettersGuessed = [];
 
 function myFunction() {     //game starts on button click in html
@@ -20,6 +21,20 @@ function myFunction() {     //game starts on button click in html
     var wordChoice = wordBank[Math.floor(Math.random() * wordBank.length)];
 
     console.log(wordChoice);
+
+    //now need to display wordChoice as under scores
+
+    var underscore = wordChoice.replace(/./g, "_ ");
+
+    var html = 
+        "<p>" + underscore + "</p>" +
+        "<p>Wins: " + wins + "</p>" +
+        "<p>Losses: " + losses + "</p>" +
+        "<p>Guesses Remaining: " + guessesLeft + "</p>" +
+        "<p>Guessed Letters: " + lettersGuessed.join(', ') + "</p>";
+
+
+        document.querySelector("#game").innerHTML = html;
 
     document.onkeyup = function(event) {    //after word is selected, user key input triggers next event
 
@@ -29,5 +44,22 @@ function myFunction() {     //game starts on button click in html
 
         console.log(userGuess);
         console.log(lettersGuessed);
+
+        var html =               //can only get guessed letters to display if this is also down here.
+            "<p>" + underscore + "</p>" +
+            "<p>Wins: " + wins + "</p>" +
+            "<p>Losses: " + losses + "</p>" +
+            "<p>Guesses Remaining: " + guessesLeft + "</p>" +
+            "<p>Guessed Letters: " + lettersGuessed.join(', ') + "</p>";
+
+        document.querySelector("#game").innerHTML = html;
+
+
+
+
     }
+
+
+
+
 }
