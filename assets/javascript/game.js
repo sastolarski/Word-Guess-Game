@@ -45,6 +45,21 @@ function myFunction() {     //game starts on button click in html
         console.log(userGuess);
         console.log(lettersGuessed);
 
+        //if userGuess matches any letter in wordChoice, that letters needs to show up instead of the underscore
+
+        if ((wordChoice).includes(userGuess)) {
+            console.log("you got it");
+        } else {
+            console.log("nope");
+        }
+
+        for (var j = 0; j < wordChoice.length; j++) {
+            if (wordChoice[j] === userGuess) {
+            lettersGuessed[j] = userGuess;
+            }
+        }
+        
+
         var html =               //can only get guessed letters to display if this is also down here.
             "<p>" + underscore + "</p>" +
             "<p>Wins: " + wins + "</p>" +
