@@ -18,3 +18,10 @@ while (remainingLetters > 0) {
 
 }
 
+
+for (var j = 0; j < wordChoice.length; j++) {
+    if (wordChoice[j] === userGuess) {
+    lettersGuessed[j] = userGuess;
+    }
+}
+

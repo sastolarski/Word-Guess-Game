@@ -26,15 +26,11 @@ function myFunction() {     //game starts on button click in html
 
     var underscore = wordChoice.replace(/./g, "_ ");
 
-    var html = 
-        "<p>" + underscore + "</p>" +
-        "<p>Wins: " + wins + "</p>" +
-        "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Remaining: " + guessesLeft + "</p>" +
-        "<p>Guessed Letters: " + lettersGuessed.join(', ') + "</p>";
-
-
-        document.querySelector("#game").innerHTML = html;
+    document.getElementById("wordChoice").innerHTML = underscore;
+    document.getElementById("wins").innerHTML = wins;
+    document.getElementById("losses").innerHTML = losses;
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    document.getElementById("letterGuessed").innerHTML = lettersGuessed;
 
     document.onkeyup = function(event) {    //after word is selected, user key input triggers next event
 
@@ -45,29 +41,18 @@ function myFunction() {     //game starts on button click in html
         console.log(userGuess);
         console.log(lettersGuessed);
 
-        //if userGuess matches any letter in wordChoice, that letters needs to show up instead of the underscore
 
         if ((wordChoice).includes(userGuess)) {
             console.log("you got it");
+           
         } else {
             console.log("nope");
+            guessesLeft --;
+            document.getElementById("guessesLeft").innerHTML = guessesLeft;
+            document.getElementById("letterGuessed").innerHTML = lettersGuessed;
         }
 
-        for (var j = 0; j < wordChoice.length; j++) {
-            if (wordChoice[j] === userGuess) {
-            lettersGuessed[j] = userGuess;
-            }
-        }
-        
 
-        var html =               //can only get guessed letters to display if this is also down here.
-            "<p>" + underscore + "</p>" +
-            "<p>Wins: " + wins + "</p>" +
-            "<p>Losses: " + losses + "</p>" +
-            "<p>Guesses Remaining: " + guessesLeft + "</p>" +
-            "<p>Guessed Letters: " + lettersGuessed.join(', ') + "</p>";
-
-        document.querySelector("#game").innerHTML = html;
 
 
 
