@@ -23,7 +23,7 @@ function startGame() {
         
     }
     //happens everytime on start
-    document.getElementById("wordBlanks").textContent = underscores;
+    document.getElementById("wordBlanks").textContent = underscores.join(" ");
     document.getElementById("wins").textContent = wins;
     document.getElementById("losses").textContent = losses;
     document.getElementById("guessesLeft").textContent = guessesLeft;
@@ -56,7 +56,7 @@ function win() {
 
                 if(randomWord[i] === userGuesses) {
                     underscores[i] = userGuesses;
-                    document.getElementById("wordBlanks").textContent = underscores;
+                    document.getElementById("wordBlanks").textContent = underscores.join(" ");
                     winCounter++;
                     win();
                 }
@@ -70,7 +70,7 @@ function win() {
             guessesLeft--;
             document.getElementById("guessesLeft").textContent = guessesLeft;
             win();
-            // document.getElementById("lettersGuessed").textContent = wrongLetter;
+            
         }
 
     }; //on key up function

@@ -28,3 +28,7 @@ h1 {
 img {
     margin-top: 50px;
 }
+
+#wordBlanks {
+    letter-spacing: 5px;
+}
