@@ -20,6 +20,7 @@ function startGame() {
 
         underscores.push('_ ');
         
+        
     }
     //happens everytime on start
     document.getElementById("wordBlanks").textContent = underscores;

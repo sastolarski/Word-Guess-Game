@@ -12,6 +12,7 @@ body {
     padding: 40px;
     margin: 40px;
     font-size: 32px;
+    border: 2px solid black;
 }
 
 .img1 {
@@ -22,4 +23,8 @@ body {
 h1 {
     font-family: 'Arvo', serif;
 
+}
+
+img {
+    margin-top: 50px;
 }
