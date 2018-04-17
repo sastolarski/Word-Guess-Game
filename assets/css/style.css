@@ -13,3 +13,13 @@ body {
     margin: 40px;
     font-size: 32px;
 }
+
+.img1 {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+
+}

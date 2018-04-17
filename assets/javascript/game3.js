@@ -33,12 +33,12 @@ function startGame() {
     //function to see if you have won yet
 function win() {
     if(winCounter === randomWord.length) {
-            alert("You Win");
+            alert("You Win! Click the button to play again.");
             wins++;
             guessesLeft = 10;
             winCounter = 0;
     } else if(guessesLeft === 0) {
-            alert("You Lose");
+            alert("You Lose! Click the button to try again.");
             losses++;
             guessesLeft = 10;
             winCounter = 0;
