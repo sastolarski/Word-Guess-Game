@@ -31,20 +31,20 @@ function startGame() {
 };
 
     //function to see if you have won yet
-    function win() {
-        if(winCounter === randomWord.length) {
+function win() {
+    if(winCounter === randomWord.length) {
             alert("You Win");
             wins++;
             guessesLeft = 10;
             winCounter = 0;
-        } else if(guessesLeft === 0) {
+    } else if(guessesLeft === 0) {
             alert("You Lose");
             losses++;
             guessesLeft = 10;
             winCounter = 0;
             
-        }
     }
+};
 
     document.onkeyup = function(event) {
         userGuesses = event.key;
