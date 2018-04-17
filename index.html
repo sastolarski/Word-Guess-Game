@@ -7,16 +7,17 @@
         <title>Word Guess Game</title>
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <script type="text/javascript" src="assets/javascript/game3.js"></script>
 
     </head>
     <body>
         <h1>Word Guess Game</h1>
         
-        <button onclick="myFunction()">Click Me to Begin</button>
+        <button onclick="startGame()">Click Me to Begin</button>
 
         <div id="game">
-            <p>Current Word: <span id="wordChoice"></span></p>
+            <div id="hiddenWord"></div>
+            <p><span id="wordBlanks"></span></p>
             <p>Wins: <span id="wins"></span></p>
             <p>Losses: <span id="losses"></span></p>
             <p>Guesses Remaining: <span id="guessesLeft"></span></p>

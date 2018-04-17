@@ -1,24 +1,18 @@
-var game = {
-    wins: 0,
-    losses: 0,
-    guessesLeft: 0,
-    lettersGuessed: [],
-    wordBank: ["cowboy", "mustang", "tumbleweed", "saloon", "revolver", "outlaw", "indians", "saddle", "sheriff", "cattle", "lasso", "whiskey", "shotgun", "stagecoach", "buffalo", "railroad"],
-    wordChoice: [],
+var wordBank = ["cowboy", "mustang", "tumbleweed", "saloon", "revolver", "outlaw", "indians", "saddle", "sheriff", "cattle", "lasso", "whiskey", "shotgun", "stagecoach", "buffalo", "railroad"];
 
-    chooseWord: function() {
-        var wordChoice = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
-        console.log(wordChoice);
-        
-    },
+var wins = 0;
+var losses = 0;
+var guessesLeft = 10;
+var wrongLetter = [];
+var userGuesses = [];
+var underscores = [];
+var randomWord;
 
-    createBlanks: function() {
-        var underscore = this.wordChoice.replace(/./g, "_ ");
-        console.log(underscore);
-    },
+function startGame() {
 
-
-};
+    randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log(randomWord);
+}
 
 
 
