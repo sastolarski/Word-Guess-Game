@@ -4,5 +4,12 @@
 }
 
 body {
-    background-color: rgb(237, 201, 175);
+    background-image: url("/Users/stevenstolarski/Desktop/code/repositories/Word-Guess-Game/assets/images/halftone-yellow/halftone-yellow.png");
+}
+
+.gameSection {
+    background-color: rgb(253,215,109);
+    padding: 40px;
+    margin: 40px;
+    font-size: 32px;
 }
