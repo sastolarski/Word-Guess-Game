@@ -54,7 +54,7 @@ function win() {
             
             for(var i = 0; i < randomWord.length; i++) {   //finding if letter is guess is anywhere in randomWord
 
-                if(randomWord[i] === userGuesses) {
+                if((randomWord[i] === userGuesses) && (userGuesses !== underscores[i])) {
                     underscores[i] = userGuesses;
                     document.getElementById("wordBlanks").textContent = underscores.join(" ");
                     winCounter++;
