@@ -15,12 +15,11 @@ function startGame() {
     //picks random word on call startGame
     randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
     console.log(randomWord);
-
+    
     for(var i = 0; i < randomWord.length; i++) {   //for loop generating an underscore for every letter in the word
 
         underscores.push('_ ');
-        
-        
+                
     }
     //happens everytime on start
     document.getElementById("wordBlanks").textContent = underscores.join(" ");
@@ -28,7 +27,6 @@ function startGame() {
     document.getElementById("losses").textContent = losses;
     document.getElementById("guessesLeft").textContent = guessesLeft;
     document.getElementById("letterGuessed").textContent = wrongLetter;
-
 };
 
     //function to see if you have won yet
@@ -42,8 +40,7 @@ function win() {
             alert("You Lose! Click the button to try again.");
             losses++;
             guessesLeft = 10;
-            winCounter = 0;
-            
+            winCounter = 0;       
     }
 };
 
@@ -69,10 +66,8 @@ function win() {
             console.log(wrongLetter);
             guessesLeft--;
             document.getElementById("guessesLeft").textContent = guessesLeft;
-            win();
-            
+            win();    
         }
-
     }; //on key up function
 
 
